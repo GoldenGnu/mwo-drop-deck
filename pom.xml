@@ -4,7 +4,7 @@
 	<groupId>net.nikr</groupId>
 	<artifactId>mwodropdeck</artifactId>
 	<packaging>jar</packaging>
-	<version>1.1.0</version>
+	<version>1.2.0</version>
 	<name>MwoDropDeck</name>
 	<url>http://maven.apache.org</url>
 	<build>
@@ -91,10 +91,10 @@
 								<mkdir dir="${project.build.directory}/data"/>
 								<copy todir="${project.build.directory}/data">
 									<fileset dir="data" includes="*.xml"/>
-									<fileset dir="data" includes="*.dat"/>
 								</copy>
 								<copy todir="${project.build.directory}">
-									<fileset dir="" includes="*.txt"/>
+									<fileset dir="" includes="LICENSE"/>
+									<fileset dir="" includes="README.md"/>
 								</copy>
 							</target>
 						</configuration>
