@@ -9,6 +9,7 @@ and open the template in the editor.
 <data>
 	<settings dropdeck="260" />
 	<is>
+		<!-- Light -->
 		<mech tons="20" name="Locust" clan="false" />
 		<mech tons="25" name="Commando" clan="false" />
 		<mech tons="30" name="Spider" clan="false" />
@@ -18,18 +19,22 @@ and open the template in the editor.
 		<mech tons="35" name="Panther" clan="false" />
 		<mech tons="35" name="Raven" clan="false" />
 		<mech tons="35" name="Wolfhound" clan="false" />
+		<!-- Medium -->
 		<mech tons="40" name="Cicada" clan="false" />
 		<mech tons="45" name="Blackjack" clan="false" />
+		<mech tons="45" name="Phoenix Hawk" clan="false" />
 		<mech tons="45" name="Vindicator" clan="false" />
 		<mech tons="50" name="Centurion" clan="false" />
 		<mech tons="50" name="Crab" clan="false" />
 		<mech tons="50" name="Enforcer" clan="false" />
 		<mech tons="50" name="Hunchback" clan="false" />
 		<mech tons="50" name="Trebuchet" clan="false" />
+		<mech tons="55" name="Bushwacker" clan="false" />
 		<mech tons="55" name="Griffin" clan="false" />
 		<mech tons="55" name="Kintaro" clan="false" />
 		<mech tons="55" name="Shadow Hawk" clan="false" />
 		<mech tons="55" name="Wolverine" clan="false" />
+		<!-- Heavy -->
 		<mech tons="60" name="Dragon" clan="false" />
 		<mech tons="60" name="Quickdraw" clan="false" />
 		<mech tons="60" name="Rifleman" clan="false" />
@@ -43,11 +48,13 @@ and open the template in the editor.
 		<mech tons="75" name="Black Knight" clan="false" />
 		<mech tons="75" name="Marauder" clan="false" />
 		<mech tons="75" name="Orion" clan="false" />
+		<!-- Assault -->
 		<mech tons="80" name="Awesome" clan="false" />
 		<mech tons="80" name="Victor" clan="false" />
 		<mech tons="80" name="Zeus" clan="false" />
 		<mech tons="85" name="Battlemaster" clan="false" />
 		<mech tons="85" name="Stalker" clan="false" />
+		<mech tons="90" name="Cyclops" clan="false" />
 		<mech tons="90" name="Highlander" clan="false" />
 		<mech tons="90" name="Mauler" clan="false" />
 		<mech tons="95" name="Banshee" clan="false" />
@@ -55,27 +62,36 @@ and open the template in the editor.
 		<mech tons="100" name="King Crab" clan="false" />
 	</is>
 	<clan>
+		<!-- Light -->
 		<mech tons="25" name="Mist Lynx" clan="true" />
 		<mech tons="30" name="Arctic Cheetah" clan="true" />
 		<mech tons="30" name="Kit Fox" clan="true" />
 		<mech tons="35" name="Adder" clan="true" />
 		<mech tons="35" name="Jenner IIC" clan="true" />
+		<!-- Medium -->
 		<mech tons="40" name="Viper" clan="true" />
 		<mech tons="45" name="Ice Ferret" clan="true" />
 		<mech tons="45" name="Shadow Cat" clan="true" />
 		<mech tons="50" name="Hunchback IIC" clan="true" />
+		<mech tons="50" name="Huntsman" clan="true" />
 		<mech tons="50" name="Nova" clan="true" />
 		<mech tons="55" name="Stormcrow" clan="true" />
+		<!-- Heavy -->
 		<mech tons="60" name="Mad Dog" clan="true" />
 		<mech tons="65" name="Ebon Jaguar" clan="true" />
 		<mech tons="65" name="Hellbringer" clan="true" />
+		<mech tons="65" name="Linebacker" clan="true" />
 		<mech tons="70" name="Summoner" clan="true" />
+		<mech tons="75" name="Night Gyr" clan="true" />
 		<mech tons="75" name="Orion IIC" clan="true" />
 		<mech tons="75" name="Timber Wolf" clan="true" />
+		<!-- Assault -->
 		<mech tons="80" name="Gargoyle" clan="true" />
+		<mech tons="85" name="Marauder IIC" clan="true" />
 		<mech tons="85" name="Warhawk" clan="true" />
 		<mech tons="90" name="Highlander IIC" clan="true" />
 		<mech tons="95" name="Executioner" clan="true" />
 		<mech tons="100" name="Dire Wolf" clan="true" />
+		<mech tons="100" name="Kodiak" clan="true" />
 	</clan>
 </data>
