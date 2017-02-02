@@ -21,6 +21,7 @@
 package net.nikr.mwo.gui;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -145,9 +146,19 @@ public class DropDeckPanel {
 		jClan3Scroll = GuiFactory.createScroll(jClan3, "Clan");
 		jClan4Scroll = GuiFactory.createScroll(jClan4, "Clan");
 
+		JLabel jFreeLevel = GuiFactory.createLabel(true);
+		Font font = jFreeLevel.getFont();
+		jFreeLevel.setOpaque(true);
+		jFreeLevel.setBackground(Color.BLACK);
+		jFreeLevel.setForeground(Color.LIGHT_GRAY);
+		jFreeLevel.setText("Tonnage");
+		jFreeLevel.setFont(new Font(font.getName(), Font.BOLD, font.getSize()));
+		jFreeLevel.setBorder(BorderFactory.createMatteBorder(1, 1, 0, 1, Color.BLACK));
+
 		jFree = GuiFactory.createLabel(true);
+		jFree.setFont(new Font(font.getName(), Font.BOLD, 18));
 		jFree.setOpaque(true);
-		jFree.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		jFree.setBorder(BorderFactory.createMatteBorder(0, 1, 1, 1, Color.BLACK));
 
 		jShowInfo = new JToggleButton(Images.ALL_INFO.getIcon());
 		jShowInfo.setSelectedIcon(Images.ALL_INFO_SELECTED.getIcon());
@@ -228,7 +239,7 @@ public class DropDeckPanel {
 
 		jCopyright = GuiFactory.createLabel(true);
 		jCopyright.setBorder(null);
-		jCopyright.setText("Copyright 2016 Niklas Kyster Rasmussen");
+		jCopyright.setText("Copyright 2016-2017 Niklas Kyster Rasmussen");
 
 		jLicense = GuiFactory.createLabel(true);
 		jLicense.setBorder(null);
@@ -236,7 +247,7 @@ public class DropDeckPanel {
 
 		jVersion = GuiFactory.createLabel(true);
 		jVersion.setBorder(null);
-		jVersion.setText("Version: 1.1.0");
+		jVersion.setText("Version: 1.2.0");
 
 		layout.setHorizontalGroup(
 		layout.createParallelGroup(GroupLayout.Alignment.LEADING)
@@ -247,9 +258,8 @@ public class DropDeckPanel {
 						.addComponent(jLock)
 						.addComponent(jDropDownButton)
 					)
-					.addGroup(layout.createSequentialGroup()
-						.addComponent(jFree, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Integer.MAX_VALUE)
-					)
+					.addComponent(jFree, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Integer.MAX_VALUE)
+					.addComponent(jFreeLevel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Integer.MAX_VALUE)
 					.addGroup(layout.createSequentialGroup()
 						.addGroup(layout.createParallelGroup(GroupLayout.Alignment.CENTER)
 							.addComponent(jLock1)
@@ -305,9 +315,9 @@ public class DropDeckPanel {
 					.addComponent(jLock, 22, 22, 22)
 					.addComponent(jDropDownButton, 22, 22, 22)
 				)
-				.addGroup(layout.createParallelGroup()
-					.addComponent(jFree, 22, 22, 22)
-				)
+				.addComponent(jFreeLevel, 22, 22, 22)
+				.addGap(0)
+				.addComponent(jFree)
 				.addGroup(layout.createParallelGroup()
 					.addGroup(layout.createSequentialGroup()
 						.addGroup(layout.createParallelGroup()
@@ -600,14 +610,12 @@ public class DropDeckPanel {
 		updateLabel(jMech4, jWeightInfo4);
 		//Update status
 		free = getFree();
+		jFree.setText((program.getSettings().getDropDeck() - free) + " of " +program.getSettings().getDropDeck());
 		if (free > 0) {
-			jFree.setText("Unused Weight: " + free + "t");
 			jFree.setBackground(new Color(255, 255, 200));
 		} else if (free < 0) {
-			jFree.setText("Too much weight: " + free + "t");
 			jFree.setBackground(new Color(255, 200, 200));
 		} else {
-			jFree.setText("OK");
 			jFree.setBackground(new Color(200, 255, 200));
 		}
 		validating = false; //Done validating
